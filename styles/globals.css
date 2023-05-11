@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.root {
+  padding: 0;
+  margin: 0;
+  background-color: #30323D;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  justify-content: center;
+  opacity: 0;
+  transition: 1s;
+}
+
+.fadeIn {
+  opacity: 1;
+  animation: fadeIn 1s
+}
+
+.fadeOut {
+  opacity: 0;
+  animation: fadeOut 3s
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.text-introduction, .text-second, .text-third {
+  color: #E8C547;
+}
+
+.text-introduction {
+  font-size: 70px;
+  font-weight: 400;
+  
+}
+
+.text-second {
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  10% { opacity: 0}
+  20% { opacity: 0}
+  30% { opacity: 0}
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  10% { opacity: 0}
+  20% { opacity: 0}
+  30% { opacity: 0}
+  100% { opacity: 0; }
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
