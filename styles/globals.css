@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -59,7 +60,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0px;
-  font-family: 'Rubik Distressed', cursive;
+  font-family: 'Langar', cursive;
 }
 
 .text-second {

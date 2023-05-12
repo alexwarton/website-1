@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       fontFamily: {
         'bungee': ['Bungee Shade', 'sans-serif'],
-        'distress': ['Rubik Distressed', 'sans-serif']
+        'distress': ['Rubik Distressed', 'sans-serif'],
+        'thin': ['Langar', 'sans-serif'
+        ]
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
