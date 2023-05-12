@@ -19,7 +19,6 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-
 }
 
 .container {
@@ -31,6 +30,13 @@ body {
   transition: 1s;
   justify-content: center;
   align-items: center;
+}
+
+.justify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .video {
@@ -124,6 +130,7 @@ body {
   padding: 0 5px;
   display: flex;
   height: 40px;
+  width:500px;
 }
 
 .progress-value {
@@ -143,4 +150,34 @@ body {
   100% {
     width: 100%;
   }
+}
+
+.submit {
+  color: white;
+  border: 1px solid grey;
+  text-align: center;
+  padding: 8px;
+  width: 400px;
+  
+}
+
+.inputField {
+  padding: 10px;
+  border-radius: 2px;
+  color: white;
+  width: 400px;
+  background-color: black;
+  border-bottom: 1px solid grey;
+}
+
+.label {
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.input {
+
+  color: white;
+  margin-top: 20px;
+
 }
