@@ -23,7 +23,7 @@ main, body {
 }
 
 .container {
-  aspect-ratio: 10 / 16;
+  aspect-ratio: 9 / 16;
   height: 800px;
   display: flex;
   flex-direction: column;

@@ -48,27 +48,29 @@ export default function Home() {
 
           <div className={`container ${transitionStage}`} >
 
-            <video id='vid' autoPlay muted={mutedstate}>
+            {/* <video id='vid' autoPlay muted={mutedstate}>
               <source src={src} type="video/mp4" />
-            </video>
+            </video> */}
 
+            <div className="video-responsive">
+              <iframe className='video'
+                height="340px"
+                width="600px"
+                src={`https://www.youtube.com/embed/onHoYM6G3gA?controls=0&modestbranding=1 `}
+                title="Embedded youtube"
+    
+              />
+            </div>
+{/* 
             <button><a onClick={() => changeState()} className="text-second">
               Hear the sound
-            </a></button>
+            </a></button> */}
 
             <button><a onClick={() => setLoad()} className="text-introduction font-bungee">
               Find out more
             </a></button>
 
-            {/* <div className="video-responsive">
-              <iframe className='video'
-                height="340px"
-                width="600px"
-                src={`https://www.youtube.com/embed/Way9Dexny3w?controls=0&modestbranding=1 `}
-                title="Embedded youtube"
-    
-              />
-            </div> */}
+            
 
             <img src='tim.jpg' width="125px" />
           </div>
