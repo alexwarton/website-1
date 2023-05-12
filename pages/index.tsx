@@ -65,7 +65,7 @@ export default function Home() {
               </button></a>
 
             <a onClick={() => setLoad()} className="text-introduction font-distres"><button>
-              FIND OUT MORE
+              Find out more
               </button></a>
 
             
