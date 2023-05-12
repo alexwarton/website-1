@@ -64,8 +64,8 @@ export default function Home() {
               Hear the sound
               </button></a>
 
-            <a onClick={() => setLoad()} className="text-introduction"><button>
-              Find out more
+            <a onClick={() => setLoad()} className="text-introduction font-distres"><button>
+              FIND OUT MORE
               </button></a>
 
             

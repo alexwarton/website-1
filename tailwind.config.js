@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bungee': ['Bungee Shade', 'sans-serif']
+        'bungee': ['Bungee Shade', 'sans-serif'],
+        'distress': ['Rubik Distressed', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

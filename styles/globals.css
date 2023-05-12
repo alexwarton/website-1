@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +8,8 @@
 
 
 
-main, body {
+main,
+body {
   background: black;
 }
 
@@ -44,17 +46,20 @@ main, body {
   animation: fadeOut 3s
 }
 
-.text-introduction, .text-second, .text-third {
+.text-introduction,
+.text-second,
+.text-third {
   color: white;
   margin-top: 30px;
   margin-bottom: 40px;
 }
 
 .text-introduction {
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 45px;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
+  font-family: 'Rubik Distressed', cursive;
 }
 
 .text-second {
@@ -64,23 +69,51 @@ main, body {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  10% { opacity: 0}
-  20% { opacity: 0}
-  30% { opacity: 0}
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 0
+  }
+
+  30% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  10% { opacity: 0}
-  20% { opacity: 0}
-  30% { opacity: 0}
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 0
+  }
+
+  30% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .progress {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -100,6 +133,11 @@ main, body {
 }
 
 @keyframes load {
-  0% { width: 0; }
-  100% { width: 100%; }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
