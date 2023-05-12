@@ -36,6 +36,10 @@ export default function Home() {
     setMutedState(false)
   }
 
+  const src =
+  "https://ia801602.us.archive.org/15/items/streetcatpreview-v-2/streetcatpreview%20-%20v2.mp4";
+
+
   switch (change) {
     case 'home':
       return (
@@ -45,7 +49,7 @@ export default function Home() {
           <div className={`container ${transitionStage}`} >
 
             <video id='vid' autoPlay muted={mutedstate}>
-              <source src="./preview.mp4" type="video/mp4" />
+              <source src={src} type="video/mp4" />
             </video>
 
             <button><a onClick={() => changeState()} className="text-second">
