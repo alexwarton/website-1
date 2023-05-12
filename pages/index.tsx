@@ -54,8 +54,8 @@ export default function Home() {
 
             <div className="video-responsive">
               <iframe className='video'
-                height="340px"
-                width="600px"
+                width="500px"
+                height="400xp"
                 src={`https://www.youtube.com/embed/onHoYM6G3gA?controls=0&modestbranding=1 `}
                 title="Embedded youtube"
     
