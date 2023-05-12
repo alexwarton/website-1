@@ -11,7 +11,7 @@ export default function Home() {
   const [change, setChange] = useState('home');
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [constrolstate, setControlState] = useState(true)
-  const [mutedstate, setMutedState] = useState(true)
+  const [mutedstate, setMutedState] = useState(1)
 
   function setLoad() {
     setTransitionStage('fadeOut')
@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   function changeState(){
-    setMutedState(false)
+    setMutedState(0)
   }
 
   const src =
@@ -56,17 +56,17 @@ export default function Home() {
               <iframe className='video'
                 width="500px"
                 height="400xp"
-                src={`https://www.youtube.com/embed/onHoYM6G3gA?controls=0&modestbranding=1 `}
+                src={`https://www.youtube.com/embed/onHoYM6G3gA?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}`}
+                allow="autoplay"
                 title="Embedded youtube"
-    
               />
             </div>
-{/* 
+
             <button><a onClick={() => changeState()} className="text-second">
               Hear the sound
-            </a></button> */}
+            </a></button>
 
-            <button><a onClick={() => setLoad()} className="text-introduction font-bungee">
+            <button><a onClick={() => setLoad()} className="text-introduction">
               Find out more
             </a></button>
 
