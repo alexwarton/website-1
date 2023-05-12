@@ -6,31 +6,36 @@
 @tailwind utilities;
 
 
-
+main, body {
+  background: black;
+}
 
 .root {
   padding: 0;
   margin: 0;
-  background-color: #30323D;
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
+  background-color: black;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  
+  align-items: center;
+
 }
 
 .container {
+  aspect-ratio: 10 / 16;
+  height: 800px;
   display: flex;
-  flex-direction: row;
-  width: 1200px;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   opacity: 0;
   transition: 1s;
+}
+
+.justify {
+  justify-content: center;
+  align-items: center;
 }
 
 .fadeIn {
@@ -43,27 +48,21 @@
   animation: fadeOut 3s
 }
 
-.text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
 .text-introduction, .text-second, .text-third {
-  color: #E8C547;
+  color: white;
+  
 }
 
 .text-introduction {
-  font-size: 70px;
+  font-size: 35px;
   font-weight: 400;
   
 }
 
 .text-second {
   font-weight: 300;
-  margin-top: 20px;
   font-size: 14px;
+
 }
 
 @keyframes fadeIn {
