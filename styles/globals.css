@@ -22,7 +22,6 @@ main, body {
 }
 
 .container {
-  width: 500px;
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -49,7 +48,8 @@ main, body {
 
 .text-introduction, .text-second, .text-third {
   color: white;
-  
+  align-items: center;
+  text-align: center;
 }
 
 .text-introduction {
