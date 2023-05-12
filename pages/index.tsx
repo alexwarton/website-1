@@ -51,8 +51,6 @@ export default function Home() {
             {/* <video id='vid' autoPlay muted={mutedstate}>
               <source src={src} type="video/mp4" />
             </video> */}
-
-            <div className="video-responsive">
               <iframe className='video'
                 width="500px"
                 height="400xp"
@@ -61,15 +59,14 @@ export default function Home() {
                 title="Embedded youtube"
                 
               />
-            </div>
 
-            <button><a onClick={() => changeState()} className="text-second">
+            <a onClick={() => changeState()} className="text-second"><button>
               Hear the sound
-            </a></button>
+              </button></a>
 
-            <button><a onClick={() => setLoad()} className="text-introduction">
+            <a onClick={() => setLoad()} className="text-introduction"><button>
               Find out more
-            </a></button>
+              </button></a>
 
             
 

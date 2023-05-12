@@ -22,7 +22,7 @@ main, body {
 }
 
 .container {
-  height: 800px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -48,8 +48,9 @@ main, body {
 
 .text-introduction, .text-second, .text-third {
   color: white;
-  align-items: center;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 .text-introduction {
@@ -90,7 +91,6 @@ main, body {
   padding: 0 5px;
   display: flex;
   height: 40px;
-  width: 500px;
 }
 
 .progress-value {
