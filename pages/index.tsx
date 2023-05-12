@@ -54,12 +54,11 @@ export default function Home() {
               <iframe className='video'
                 width="100%"
                 height="300px"
-                src={`https://www.youtube.com/embed/onHoYM6G3gA?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
+                src={`https://www.youtube.com/embed/6Mhradl9XIs?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 title="Embedded youtube"
-                
               />
-
+              
             <a onClick={() => changeState()} className="text-second"><button>
               Hear the sound
               </button></a>
