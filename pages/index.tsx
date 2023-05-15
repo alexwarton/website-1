@@ -15,6 +15,7 @@ export default function Home() {
   const [mutedstate, setMutedState] = useState(1)
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
+
   const router = useRouter();
   const [phone, setPhone] = useState('')
   const [showform, setShowForm] = useState(false);
@@ -29,6 +30,7 @@ export default function Home() {
   function handleSubmit(){
     // put function to submit user to database here
   }
+
 
     if(showform){
       return(
@@ -65,5 +67,6 @@ export default function Home() {
           </div>
         </Layout>
       );
+
     }
 }

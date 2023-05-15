@@ -157,7 +157,7 @@ body {
   border: 1px solid grey;
   text-align: center;
   padding: 8px;
-  width: 400px;
+  width: 300px;
   
 }
 
@@ -165,7 +165,7 @@ body {
   padding: 10px;
   border-radius: 2px;
   color: white;
-  width: 400px;
+  width: 300px;
   background-color: black;
   border-bottom: 1px solid grey;
 }
@@ -180,4 +180,11 @@ body {
   color: white;
   margin-top: 20px;
 
+}
+
+.header-container {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 30px;
 }
