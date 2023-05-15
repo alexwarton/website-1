@@ -14,6 +14,7 @@ export default function Home() {
   const [mutedstate, setMutedState] = useState(1)
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
 
   function setLoad() {
     setTransitionStage('fadeOut')
@@ -40,6 +41,10 @@ export default function Home() {
 
   const src =
     "https://ia801602.us.archive.org/15/items/streetcatpreview-v-2/streetcatpreview%20-%20v2.mp4";
+
+  function handleSubmit(){
+    // put function to submit user to database here
+  }
 
 
   switch (change) {
@@ -79,13 +84,15 @@ export default function Home() {
       return (
         <Layout>
           <div className={`container fadeIn`}>
+            <div className="header-container">
+              <div className="discord-link">
+                Discord ICON Here
+              </div>
+            </div>
             <div className="text-introduction font-bungee">
-              INSERT ITEMS HERE ETC ETC
+              TZ
             </div>
             <form>
-
-
-
               <div className="input">
                 <div className="label">
                   Email Address
@@ -97,6 +104,20 @@ export default function Home() {
                   placeholder="example@gmail.com"
                   type="email"
                   value={email}
+                />
+              </div>
+
+              <div className="input">
+                <div className="label">
+                  Mobile
+                </div>
+                <input
+                  className="inputField"
+                  autoFocus
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="0401 001 110"
+                  type="phone"
+                  value={phone}
                 />
               </div>
 
@@ -116,7 +137,7 @@ export default function Home() {
 
 
               <div className="input">
-                <button className="submit" type="submit" value="Join Us">Join Us</button>
+                <button className="submit" type="submit" value="Join Us">JOIN</button>
               </div>
             </form>
           </div>
