@@ -9,16 +9,13 @@ import Form from './components/Form';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [change, setChange] = useState('home');
   const [transitionStage, setTransitionStage] = useState('fadeIn')
-  const [constrolstate, setControlState] = useState(true)
   const [mutedstate, setMutedState] = useState(1)
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
-
-  const router = useRouter();
   const [phone, setPhone] = useState('')
   const [showform, setShowForm] = useState(false);
+  const router = useRouter();
   
   function changeState() {
     setMutedState(0)

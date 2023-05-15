@@ -12,7 +12,6 @@ export default function Form() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("test");
    // setTransitionStage('fadeOut')
 
     setTimeout(function () {
