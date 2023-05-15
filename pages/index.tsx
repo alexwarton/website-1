@@ -16,6 +16,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const router = useRouter();
+  const [phone, setPhone] = useState('')
 
   function setLoad() {
     setTransitionStage('fadeOut')
@@ -42,6 +43,10 @@ export default function Home() {
 
   const src =
     "https://ia801602.us.archive.org/15/items/streetcatpreview-v-2/streetcatpreview%20-%20v2.mp4";
+
+  function handleSubmit(){
+    // put function to submit user to database here
+  }
 
 
       return (
