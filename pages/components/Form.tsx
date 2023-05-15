@@ -2,15 +2,17 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Embed from 'react-embed';
 import { useEffect, useState } from 'react';
-import Layout from './components/layout'
+// import '../public/tim.jpg'
+import Layout from './layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function FormPage() {
+export default function Form() {
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("test");
    // setTransitionStage('fadeOut')
 
     setTimeout(function () {

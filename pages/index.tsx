@@ -5,7 +5,7 @@ import Embed from 'react-embed';
 import { useState } from 'react';
 import '../public/tim.jpg'
 import { useRouter } from 'next/router';
-
+import Form from './components/Form';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -17,26 +17,8 @@ export default function Home() {
   const [name, setName] = useState('')
   const router = useRouter();
   const [phone, setPhone] = useState('')
-
-  function setLoad() {
-    setTransitionStage('fadeOut')
-
-    setTimeout(function setLoad() {
-      setTransitionStage('fadeIn')
-      setChange('loading')
-    }, 1000)
-
-    setTimeout(function update() {
-      setTransitionStage('fadeOut')
-    }, 5000
-    )
-    setTimeout(function change() {
-      setTransitionStage('fadeIn')
-      setChange('form')
-    }, 6000)
-
-  }
-
+  const [showform, setShowForm] = useState(false);
+  
   function changeState() {
     setMutedState(0)
   }
@@ -48,9 +30,14 @@ export default function Home() {
     // put function to submit user to database here
   }
 
+    if(showform){
+      return(
+        <Form/>
+      )
+    }else{
 
       return (
-
+        
         <Layout >
 
           <div className={`container ${transitionStage}`} >
@@ -64,13 +51,13 @@ export default function Home() {
               src={`https://www.youtube.com/embed/6Mhradl9XIs?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               title="Embedded youtube"
-            />
+              />
 
             <a onClick={() => changeState()} className="text-second"><button>
               Hear the sound
             </button></a>
 
-            <a onClick={() => router.push('/FormPage')} className="text-introduction font-distres"><button>
+            <a onClick={() => setShowForm(true)} className="text-introduction font-distres"><button>
               find out more
             </button></a>
 
@@ -78,4 +65,5 @@ export default function Home() {
           </div>
         </Layout>
       );
+    }
 }
