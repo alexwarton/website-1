@@ -52,7 +52,7 @@ export default function Form() {
     return (
       <>
       {/* TODO make context in index so you can go back */}
-            <button className="ml-5 mt-5 fadeIn"style={{ width: 50, height: 60, color: 'white' }} onClick={() => redirect()}>BACK BUTTON (ICON TO BE PLACED LATER)</button>
+            <img className="ml-5 mt-5 fadeIn" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => console.log("back")}/>
       <div className={`container fadeIn`}>
           <Layout>
               <div className="text-introduction font-bungee">
