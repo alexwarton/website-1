@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 import { useRouter } from 'next/router';
 
 export default function Form() {
-  const router = useRouter()
+
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({email: '', name: ''});
@@ -52,7 +52,7 @@ export default function Form() {
     return (
       <>
       {/* TODO make context in index so you can go back */}
-            <button className="ml-5 mt-5 fadeIn" style={{ width: 50, height: 60, color: 'white' }} onClick={() => redirect()}>------</button>
+            <img className="ml-5 mt-5 fadeIn" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => console.log("back")}/>
       <div className={`container fadeIn`}>
           <Layout>
               <div className="text-introduction font-bungee">
