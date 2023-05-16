@@ -31,7 +31,7 @@ export default function Home() {
 
     if(showform){
       return(
-        <Form />
+        <Form setShowForm={setShowForm}/>
       )
     }else{
 
