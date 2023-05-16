@@ -7,9 +7,10 @@ import '../../public/tim.jpg'
 import Layout from './layout'
 import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
+import { useRouter } from 'next/router';
 
 export default function Form() {
-
+  const router = useRouter()
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({email: '', name: ''});
@@ -27,6 +28,10 @@ export default function Form() {
     }, 5000
     )
   });
+
+  function redirect(){
+    router.reload(window.location.pathname)
+  }
   
   if(loading){
     return (
@@ -47,7 +52,7 @@ export default function Form() {
     return (
       <>
       {/* TODO make context in index so you can go back */}
-            <img className="ml-5 mt-5 fadeIn" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => console.log("back")}/>
+            <button className="ml-5 mt-5 fadeIn" style={{ width: 50, height: 60, color: 'white' }} onClick={() => redirect()}>------</button>
       <div className={`container fadeIn`}>
           <Layout>
               <div className="text-introduction font-bungee">
@@ -86,7 +91,7 @@ export default function Form() {
   
                 <div className="input">
                   {/* TODO send formdata to database */}
-                  <button className="submit" type="submit" value="Join Us">Join Us</button>
+                  <button className="submit" type="submit" value="Join Us">Join</button>
                   <div className="text-white" onClick={() => console.log(formData)}> test </div>
                 </div>
               </form>
