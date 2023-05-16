@@ -11,9 +11,6 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [mutedstate, setMutedState] = useState(1)
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
   const [showform, setShowForm] = useState(false);
   const router = useRouter();
   
@@ -44,8 +41,7 @@ export default function Home() {
             {/* <video id='vid' autoPlay muted={mutedstate}>
               <source src={src} type="video/mp4" />
             </video> */}
-            <iframe className='video'
-              width="100%"
+            <iframe className='video lg:w-1/2 sm:1/2 md: 1/2'
               height="300px"
               src={`https://www.youtube.com/embed/6Mhradl9XIs?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
