@@ -8,7 +8,8 @@ import Layout from './layout'
 import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Form() {
+
+export default function Form({ setShowForm }) {
 
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [loading, setLoading] = useState(true);
@@ -47,7 +48,7 @@ export default function Form() {
     return (
       <>
       {/* TODO make context in index so you can go back */}
-            <img className="ml-5 mt-5 fadeIn" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => console.log("back")}/>
+        <img className="ml-5 mt-5 fadeIn cursor-pointer" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => setShowForm(false)}/>
       <div className={`container fadeIn`}>
           <Layout>
               <div className="text-introduction font-bungee">
