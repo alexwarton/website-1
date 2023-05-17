@@ -1,7 +1,7 @@
 import Ably from "ably/promises";
 import { useEffect } from 'react'
 
-const ably = new Ably.Realtime.Promise({ authUrl: 'https://limit-edition1.vercel.app/api/token' });
+const ably = new Ably.Realtime.Promise({ authUrl: process.env.HOST+'/api/token' });
 
 
 export function useChannel(channelName, callbackOnMessage) {
