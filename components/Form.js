@@ -2,8 +2,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Embed from 'react-embed';
 import { useEffect, useState } from 'react';
-import "../../public/arrowleft.png";
-import '../../public/tim.jpg'
+import "./public/arrowleft.png";
+import './public/tim.jpg'
 import Layout from './layout'
 import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
