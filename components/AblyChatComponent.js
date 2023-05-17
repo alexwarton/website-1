@@ -38,10 +38,10 @@ export default function AblyChatComponent (){
     const author = message.connectionId === ably.connection.id ? "me" : "other";
     
     if(author === "me"){
-        return  <span key={index + "me"} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span>;
+        return  <div> <span className='text-white float-left'> Me </span> <span key={index + "me"} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span> </div>;
 
     }else {
-        return  <span key={index + "other"} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span>;
+        return  <div> <span className='text-white'> Other </span> <span key={index + "other"} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span> </div>;
     }
   });
 
