@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Layout from './components/layout'
+import Layout from '../components/layout'
 import Embed from 'react-embed';
 import { useState } from 'react';
 import '../public/tim.jpg'
 import { useRouter } from 'next/router';
-import Form from './components/Form.js';
+import Form from '../components/Form.js';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

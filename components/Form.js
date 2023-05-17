@@ -9,7 +9,7 @@ import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
 import dynamic from 'next/dynamic'
 
-const AblyChatComponent = dynamic(() => import('../components/AblyChatComponent'), { ssr: false });
+const AblyChatComponent = dynamic(() => import('./AblyChatComponent'), { ssr: false });
 
 
 export default function Form({ setShowForm }) {
