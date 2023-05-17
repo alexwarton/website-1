@@ -36,7 +36,7 @@ export default function AblyChatComponent (){
 
   const messages = receivedMessages.map((message, index) => {
     const author = message.connectionId === ably.connection.id ? "me" : "other";
-    if(author === "me"){
+    
         return  <span key={index} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span>;
 
     // }else{
