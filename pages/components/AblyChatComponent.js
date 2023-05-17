@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useChannel } from "./AblyReactEffect";
 
-const AblyChatComponent = () => {
+export default function AblyChatComponent (){
 
   let inputBox = null;
   let messageEnd = null;
@@ -37,10 +37,10 @@ const AblyChatComponent = () => {
   const messages = receivedMessages.map((message, index) => {
     const author = message.connectionId === ably.connection.id ? "me" : "other";
     if(author === "me"){
-        return <div key={index}> <span className='ml-2 mt-3 float-left text-xs text-white'>you</span> <span className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span></div>;
+        return <div > <span className='ml-2 mt-3 float-left text-xs text-white'>you</span> <span key={index} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span></div>;
 
     }else{
-        return <div key={index}><span className='mt-3 float-right text-xs text-white'>other</span> <span className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span></div>;
+        return <div ><span className='mt-3 float-right text-xs text-white'>other</span> <span key={index} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span></div>;
     }
   });
 
@@ -69,4 +69,4 @@ const AblyChatComponent = () => {
   )
 }
 
-export default AblyChatComponent;
+// export default AblyChatComponent;
