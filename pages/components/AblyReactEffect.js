@@ -1,7 +1,7 @@
 import Ably from "ably/promises";
 import { useEffect } from 'react'
 
-const ably = new Ably.Realtime.Promise({ authUrl: 'api/createToenRequest' });
+const ably = new Ably.Realtime({ authUrl: 'api/createTokenRequest' });
 
 export function useChannel(channelName, callbackOnMessage) {
     const channel = ably.channels.get(channelName);
