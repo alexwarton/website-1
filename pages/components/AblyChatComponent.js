@@ -12,7 +12,6 @@ const AblyChatComponent = () => {
 
   const [channel, ably] = useChannel("chat-1", (message) => {
     const history = receivedMessages.slice(-199);
-    console.log(history);
     setMessages([...history, message]);
   });
 
