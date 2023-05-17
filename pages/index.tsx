@@ -31,7 +31,6 @@ export default function Home() {
         <Form setShowForm={setShowForm}/>
       )
     }else{
-
       return (
         
         <Layout >

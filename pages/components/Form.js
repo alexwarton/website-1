@@ -7,6 +7,9 @@ import '../../public/tim.jpg'
 import Layout from './layout'
 import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
+import dynamic from 'next/dynamic'
+
+const AblyChatComponent = dynamic(() => import('../components/AblyChatComponent'), { ssr: false });
 
 
 export default function Form({ setShowForm }) {
@@ -88,12 +91,13 @@ export default function Form({ setShowForm }) {
                 <div className="input">
                   {/* TODO send formdata to database */}
                   <button className="submit" type="submit" value="Join Us">Join Us</button>
-                  <div className="text-white" onClick={() => console.log(formData)}> test </div>
+                  {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
                 </div>
               </form>
           </Layout>
+          <AblyChatComponent />
             </div>
-                    </>
+          </>
         )
   
       }
