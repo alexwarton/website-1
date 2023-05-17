@@ -37,11 +37,12 @@ export default function AblyChatComponent (){
   const messages = receivedMessages.map((message, index) => {
     const author = message.connectionId === ably.connection.id ? "me" : "other";
     
-        return  <span key={index} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span>;
+    if(author === "me"){
+        return  <span key={index + "me"} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span>;
 
-    // }else{
-    //     return <div ><span className='mt-3 float-right text-xs text-white'>other</span> <span key={index} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span></div>;
-    // }
+    }else {
+        return  <span key={index + "other"} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span>;
+    }
   });
 
   useEffect(() => {
