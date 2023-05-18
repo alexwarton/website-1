@@ -51,7 +51,7 @@ export default function Form({ setShowForm }) {
     return (
       <>
         <img className="ml-5 mt-5 fadeIn cursor-pointer" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => setShowForm(false)} />
-        <Layout>
+        <div className='container fadeIn'>
           <div className="text-introduction font-bungee">
             INSERT ITEMS HERE ETC ETC
           </div>
@@ -92,7 +92,7 @@ export default function Form({ setShowForm }) {
               {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
             </div>
           </form>
-        </Layout>
+        </div>
       </>
     )
 
