@@ -38,7 +38,7 @@ export default function AblyChatComponent (){
     const author = message.connectionId === ably.connection.id ? "me" : "other";
     
     if(author === "me"){
-        return  <div  key={index + "me" + "div"}> <span className='text-white float-left text-xs' key={index + "me" + "label"}> Me </span> <span key={index + "me"} className='bg-blue-500 float-left p-2 rounded-xl m-3 text-white'>{message.data}</span> </div>;
+        return  <div  key={index + "me" + "div"}> <span className='text-white float-left text-xs' key={index + "me" + "label"}> Me </span> <span key={index + "me"} className='bg-blue-500  my-message'>{message.data}</span> </div>;
 
     }else {
         return  <div  key={index + "other" + "div"}> <span className='text-white float-right text-xs' key={index + "other" + "label"}> Other </span> <span key={index + "other"} className='bg-green-500 float-right p-2 rounded-xl m-3 text-white'>{message.data}</span> </div>;
@@ -50,8 +50,8 @@ export default function AblyChatComponent (){
   });
 
   return (
-    <div className="m-5 bg-black border-[1px] border-gray-500 ">
-      <div className="h-96 overflow-y-scroll flex flex-col w-80">
+    <div className="chat-box">
+      <div className="messages overflow-y-scroll">
         {messages}
         <div ref={(element) => { messageEnd = element; }}></div>
       </div>

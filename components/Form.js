@@ -95,7 +95,7 @@ export default function Form({ setShowForm }) {
                 </div>
               </form>
           </Layout>
-          <AblyChatComponent />
+          {/* <AblyChatComponent /> */}
             </div>
           </>
         )
