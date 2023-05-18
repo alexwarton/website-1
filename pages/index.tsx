@@ -28,7 +28,9 @@ export default function Home() {
 
     if(showform){
       return(
+        <Layout>
         <Form setShowForm={setShowForm}/>
+        </Layout>
       )
     }else{
       return (

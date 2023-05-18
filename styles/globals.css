@@ -51,6 +51,7 @@ body {
   transition: 1s;
   justify-content: center;
   align-items: center;
+  max-width: 650px;
 }
 
 .justify {
