@@ -40,7 +40,7 @@ export default function Home() {
             {/* <video id='vid' autoPlay muted={mutedstate}>
               <source src={src} type="video/mp4" />
             </video> */}
-            <iframe className='video lg:w-1/2 sm:1/2 md: 1/2'
+            <iframe className='video'
               height="300px"
               src={`https://www.youtube.com/embed/6Mhradl9XIs?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
