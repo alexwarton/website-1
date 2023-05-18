@@ -39,6 +39,8 @@ export default function Home() {
 
           <div className={`container ${transitionStage}`} >
 
+            <img src="streetsmall.jpg" width="300px" style={{marginTop: "20px"}}/>
+
             {/* <video id='vid' autoPlay muted={mutedstate}>
               <source src={src} type="video/mp4" />
             </video> */}
@@ -54,7 +56,7 @@ export default function Home() {
               find out more
             </button></a>
 
-            <img src='tim.jpg' width="125px" />
+            <img src='tim.jpg' width="55px" />
           </div>
         </Layout>
       );

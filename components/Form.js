@@ -55,8 +55,8 @@ export default function Form({ setShowForm }) {
           <div className="text-introduction font-bungee">
             Join the newsletter
           </div>
-          <form>
 
+          <form>
             <div className="input">
               <div className="label">
                 Email Address
