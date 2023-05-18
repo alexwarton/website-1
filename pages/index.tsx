@@ -41,6 +41,7 @@ export default function Home() {
               <source src={src} type="video/mp4" />
             </video> */}
             <iframe className='video'
+              width="100%"
               height="300px"
               src={`https://www.youtube.com/embed/6Mhradl9XIs?autoplay=1&controls=0&modestbranding=1&mute=${mutedstate}&playsinline=1`}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
