@@ -53,7 +53,7 @@ export default function Form({ setShowForm }) {
         <img className="ml-5 mt-5 fadeIn cursor-pointer" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => setShowForm(false)} />
         <div className='container fadeIn justify'>
           <div className="text-introduction font-bungee">
-            INSERT ITEMS HERE ETC ETC
+            Join the newsletter
           </div>
           <form>
 
@@ -88,7 +88,7 @@ export default function Form({ setShowForm }) {
 
             <div className="input">
               {/* TODO send formdata to database */}
-              <button className="submit" type="submit" value="Join Us">Join Us</button>
+              <button className="submit" type="submit" value="Join Us">JOIN</button>
               {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
             </div>
           </form>
