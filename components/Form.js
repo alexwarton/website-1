@@ -8,6 +8,7 @@ import Layout from './layout'
 import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
 import dynamic from 'next/dynamic'
+import { SocialIcon } from 'react-social-icons';
 
 const AblyChatComponent = dynamic(() => import('./AblyChatComponent'), { ssr: false });
 
@@ -92,6 +93,8 @@ export default function Form({ setShowForm }) {
               {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
             </div>
           </form>
+
+          <SocialIcon url="https://discord.com" className="icon" fgColor='white'/>
         </div>
       </>
     )

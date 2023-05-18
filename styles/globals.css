@@ -67,6 +67,10 @@ body {
   border: 1px solid grey;
 }
 
+.icon {
+  border-radius: 40px;
+  margin: 30px;
+}
 
 .fadeIn {
   opacity: 1;

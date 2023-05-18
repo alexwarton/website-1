@@ -6,6 +6,7 @@ import { useState } from 'react';
 import '../public/tim.jpg'
 import { useRouter } from 'next/router';
 import Form from '../components/Form.js';
+import { SocialIcon } from 'react-social-icons';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -56,7 +57,9 @@ export default function Home() {
               find out more
             </button></a>
 
-            <img src='tim.jpg' width="55px" />
+            <SocialIcon url="https://discord.com" fgColor='white'/>
+
+            <img src='tim.jpg' width="55px" className='icon'/>
           </div>
         </Layout>
       );
