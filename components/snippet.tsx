@@ -16,7 +16,7 @@ export default function Snippet(src: any) {
                 <button className="text-introduction">download</button>
             </a>
 
-            <SocialIcon url="https://discord.com" fgColor='white'/>
+            <SocialIcon url="https://discord.com" fgColor='white' bgColor='darkgrey'/>
         </div>
     )
 }

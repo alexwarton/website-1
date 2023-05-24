@@ -19,6 +19,25 @@ export default function Form({ setShowForm }) {
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({ email: '', name: '' });
 
+  async function handleSubmit(e) {
+    const postData = async () => {
+        const data = {
+            email: formData.email,
+            name: formData.name,
+        };
+        const response = await fetch("api/createUser", {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        if (response.status === 200) {
+            console.log("success")
+        } else {
+            console.log("failure")
+        }
+    }
+    postData();
+
+}
 
   useEffect(() => {
     // setTransitionStage('fadeOut')
@@ -57,7 +76,7 @@ export default function Form({ setShowForm }) {
             Join the newsletter
           </div>
 
-          <form>
+          <form onSubmit={()=>handleSubmit()}> 
             <div className="input">
               <div className="label">
                 Email Address

@@ -57,7 +57,7 @@ export default function Home() {
               find out more
             </button></a>
 
-            <SocialIcon url="https://discord.com" fgColor='white'/>
+            <SocialIcon url="https://discord.com" fgColor='white' bgColor='darkgrey'/>
 
             <img src='tim.jpg' width="55px" className='icon'/>
           </div>
