@@ -27,11 +27,11 @@ export default function Form({ setShowForm }) {
             email: formData.email,
             name: formData.name,
         };
-        const response = await fetch("api/createUser", {
+        await fetch("api/createUser", {
             method: "POST",
             body: JSON.stringify(data)
         })
-        router.push('/home')
+        // Router.push('/home')
 }
 
 
@@ -72,7 +72,7 @@ export default function Form({ setShowForm }) {
             Join the newsletter
           </div>
 
-          <form> 
+          <form action="/home"> 
             <div className="input">
               <div className="label">
                 Email Address
@@ -103,9 +103,7 @@ export default function Form({ setShowForm }) {
 
 
             <div className="input">
-              {/* TODO send formdata to database */}
               <button className="submit" type="submit" value="Join Us" disabled={!formData.email} onClick={()=>handleSubmit()}>JOIN</button>
-              {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
             </div>
           </form>
 
