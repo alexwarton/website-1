@@ -72,7 +72,7 @@ export default function Form({ setShowForm }) {
       <>
         <img className="ml-5 mt-5 fadeIn cursor-pointer" src='arrowleft.png' style={{ width: 50, height: 60 }} onClick={() => setShowForm(false)} />
         <div className='container fadeIn justify'>
-          <div className="text-introduction font-bungee">
+          <div className="text-introduction font-bungee no-border">
             Join the newsletter
           </div>
 
@@ -113,7 +113,7 @@ export default function Form({ setShowForm }) {
             </div>
           </form>
 
-          <SocialIcon url="https://discord.com" className="icon" fgColor='white'/>
+          <SocialIcon url="https://discord.com" className="icon" fgColor='white' bgColor='grey'/>
         </div>
       </>
     )
