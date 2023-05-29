@@ -10,5 +10,6 @@ export default async function handler(req, res) {
             name: name
         }
     })
+    await prisma.$disconnect()
     res.status(200).send({message: "success" })
 };
