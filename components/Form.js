@@ -30,7 +30,7 @@ export default function Form({ setShowForm }) {
             body: JSON.stringify(data)
         })
         if (response.status === 200) {
-            console.log("successsss")
+            Router.push("/hello")
         } else {
             console.log("failure")
         }
