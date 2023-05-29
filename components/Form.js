@@ -29,11 +29,7 @@ export default function Form({ setShowForm }) {
             method: "POST",
             body: JSON.stringify(data)
         })
-        if (response.status === 200) {
-            Router.push("/hello")
-        } else {
-            console.log("failure")
-        }
+        Router.push("/hello")
     }
     postData();
 
