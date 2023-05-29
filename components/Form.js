@@ -9,6 +9,8 @@ import Router from 'next/router';
 const inter = Inter({ subsets: ['latin'] })
 import dynamic from 'next/dynamic'
 import { SocialIcon } from 'react-social-icons';
+import {useRouter} from 'next/router'
+import { redirect } from 'next/navigation';
 
 const AblyChatComponent = dynamic(() => import('./AblyChatComponent'), { ssr: false });
 
@@ -18,9 +20,9 @@ export default function Form({ setShowForm }) {
   const [transitionStage, setTransitionStage] = useState('fadeIn')
   const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({ email: '', name: '' });
+  const router = useRouter();
 
   async function handleSubmit(e) {
-    const postData = async () => {
         const data = {
             email: formData.email,
             name: formData.name,
@@ -29,11 +31,9 @@ export default function Form({ setShowForm }) {
             method: "POST",
             body: JSON.stringify(data)
         })
-        Router.push("/hello")
-    }
-    postData();
-
+        router.push('/home')
 }
+
 
   useEffect(() => {
     // setTransitionStage('fadeOut')
@@ -72,7 +72,7 @@ export default function Form({ setShowForm }) {
             Join the newsletter
           </div>
 
-          <form onSubmit={()=>handleSubmit()}> 
+          <form> 
             <div className="input">
               <div className="label">
                 Email Address
@@ -104,12 +104,12 @@ export default function Form({ setShowForm }) {
 
             <div className="input">
               {/* TODO send formdata to database */}
-              <button className="submit" type="submit" value="Join Us">JOIN</button>
+              <button className="submit" type="submit" value="Join Us" disabled={!formData.email} onClick={()=>handleSubmit()}>JOIN</button>
               {/* <div className="text-white" onClick={() => console.log(formData)}> test </div> */}
             </div>
           </form>
 
-          <SocialIcon url="https://discord.com" className="icon" fgColor='white' bgColor='grey'/>
+          <SocialIcon url="https://discord.com"  className="icon" fgColor='white' bgColor='grey'/>
         </div>
       </>
     )
