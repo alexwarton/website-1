@@ -81,7 +81,7 @@ export default function Form({ setShowForm }) {
                 className="inputField"
                 autoFocus
                 onChange={(e) => setFormData((prevState) => ({ ...prevState, email: e.target.value }))}
-                placeholder="example@gmail.com"
+                placeholder="Enter your email"
                 type="email"
                 value={formData.email}
               />
@@ -95,7 +95,7 @@ export default function Form({ setShowForm }) {
                 className="inputField"
                 autoFocus
                 onChange={(e) => setFormData((prevState) => ({ ...prevState, name: e.target.value }))}
-                placeholder="Alex"
+                placeholder="Enter your name"
                 type="text"
                 value={formData.name}
               />
