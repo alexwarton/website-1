@@ -107,7 +107,7 @@ export default function Form({ setShowForm }) {
             </div>
           </form>
 
-          <SocialIcon url="https://discord.com"  className="icon" fgColor='white' bgColor='grey'/>
+          <SocialIcon url="https://discord.com/invite/M45vF6b2sE"  className="icon" fgColor='white' bgColor='grey'/>
         </div>
       </>
     )
