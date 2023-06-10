@@ -114,6 +114,11 @@ body {
 
 }
 
+.map {
+  margin-top: 250px;
+  margin-bottom: 50px;
+}
+
 .no-border {
   border: 0;
 }

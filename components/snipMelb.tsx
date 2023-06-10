@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 //...
 
-export default function Snippet(src: any) {
+export default function SnipMelb(src: any) {
     const [formData, setFormData] = useState({ email: '', name: '' });
     const router = useRouter();
 
@@ -22,7 +22,7 @@ export default function Snippet(src: any) {
 
     return (
         <div className="container fadeIn justify">
-            <img className="map" width="400px" src='/Brisbane.png'></img>
+            <img className="map" width="400px" src='/Melbourne.png'></img>
             <ReactAudioPlayer
 
                 src={src.src}
